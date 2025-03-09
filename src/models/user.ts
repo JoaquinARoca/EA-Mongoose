@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import { ObjectId, Schema, model } from 'mongoose';
 
 // 1. Create an interface representing a TS object.
 export interface IUser {
@@ -10,9 +10,9 @@ export interface IUser {
 
 // 2. Create a Schema corresponding to the document in MongoDB.
 const userSchema = new Schema<IUser>({
-  name: { type: String, required: true },
+  name: { type: String, required: true},
   lastName: { type: String, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique:true },
   phone: {type:String, default:"0"}
 });
 

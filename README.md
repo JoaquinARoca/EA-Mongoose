@@ -49,5 +49,5 @@ tsc
 
 Ejecutar JS
 ```
-node dist/mongoogse.js
+node dist/main.js
 ```
